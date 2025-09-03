@@ -23,4 +23,3 @@ def recommend(movie_title):
 print('Recommendations for Interstellar:')
 print(recommend('Interstellar'))
 print(recommend('Interstellar'))
-
