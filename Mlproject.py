@@ -9,7 +9,7 @@ movies = {
 }
 
 df = pd.DataFrame(movies)
-cv = CountVectorizer()
+cv = CountVectorizer()xm
 count_matrix = cv.fit_transform(df['genre'])
 cosine_sim = cosine_similarity(count_matrix)
 
@@ -21,5 +21,6 @@ def recommend(movie_title):
  return recommended
 
 print('Recommendations for Interstellar:')
+print(recommend('Interstellar'))
 print(recommend('Interstellar'))
 
