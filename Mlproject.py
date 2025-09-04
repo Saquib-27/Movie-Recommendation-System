@@ -21,7 +21,7 @@ def recommend(movie_title):
     idx = df[df['title'] == movie_title].index[0]
     scores = list(enumerate(cosine_sim[idx]))
     scores = sorted(scores, key=lambda x: x[1], reverse=True)
-    recommended = [df.iloc[i[0]]['title'] for i in scores[1:4]]
+    recommended = [df.iloc[i[0]]['title'] for i in scores if i[0] != idx][:3]
     return recommended
 
 print('Recommendations for Interstellar:')
